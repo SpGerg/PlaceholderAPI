@@ -13,7 +13,6 @@ namespace PlaceholdersTestsFirst
     {
         public override void OnEnabled()
         {
-            Log.Info("asd");
             PLAPI.Register(new CoolPlaceholder()); //Register placeholder
             PLAPI.Register(new JustGoodPlaceholder());
 

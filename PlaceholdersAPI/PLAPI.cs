@@ -21,7 +21,7 @@ namespace PlaceholdersAPI
 
             if (Plugin.PlaceholdersPlugin.Placeholders.Any(identifier => identifier.Identifier == placeholder.Identifier))
             {
-                throw new ArgumentException($"The placeholder named {placeholder.Name} already has this identifier");
+                throw new ArgumentException($"The placeholder named \"{placeholder.Name}\" already has this identifier");
             }
 
             Plugin.PlaceholdersPlugin.Placeholders.Add(placeholder);
