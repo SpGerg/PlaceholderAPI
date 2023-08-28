@@ -1,9 +1,10 @@
 ﻿using Exiled.API.Features;
+using PlaceholdersAPI.Interfaces;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace PlaceholdersAPI
+namespace PlaceholdersAPI.Features
 {
     public static class PLAPI
     {

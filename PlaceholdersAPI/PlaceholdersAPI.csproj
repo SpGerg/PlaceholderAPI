@@ -75,12 +75,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="IPlaceholder.cs" />
-    <Compile Include="IPlaceholderColor.cs" />
-    <Compile Include="IPlaceholderHook.cs" />
-    <Compile Include="PLAPI.cs" />
+    <Compile Include="Interfaces\IPlaceholder.cs" />
+    <Compile Include="Interfaces\IPlaceholderColor.cs" />
+    <Compile Include="Interfaces\IPlaceholderHook.cs" />
+    <Compile Include="Features\PLAPI.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

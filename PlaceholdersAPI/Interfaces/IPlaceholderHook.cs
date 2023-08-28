@@ -1,6 +1,6 @@
 ﻿using Exiled.API.Features;
 
-namespace PlaceholdersAPI
+namespace PlaceholdersAPI.Interfaces
 {
     public interface IPlaceholderHook
     {

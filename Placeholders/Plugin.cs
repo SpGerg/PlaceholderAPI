@@ -1,6 +1,6 @@
 ﻿using Exiled.API.Enums;
 using Exiled.API.Features;
-using PlaceholdersAPI;
+using PlaceholdersAPI.Interfaces;
 using System.Collections.Generic;
 
 namespace Placeholders

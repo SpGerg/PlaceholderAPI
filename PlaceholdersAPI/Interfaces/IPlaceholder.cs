@@ -1,4 +1,4 @@
-﻿namespace PlaceholdersAPI
+﻿namespace PlaceholdersAPI.Interfaces
 {
     public interface IPlaceholder : IPlaceholderHook
     {
