@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorPlaceholder.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="CoolPlaceholder.cs" />
     <Compile Include="JustGoodPlaceholder.cs" />

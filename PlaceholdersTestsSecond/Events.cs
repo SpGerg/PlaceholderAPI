@@ -15,5 +15,9 @@ namespace PlaceholdersTestsSecond
                 ev.Player.Broadcast(2, PLAPI.SetPlaceholders(ev.Player, "Placeholder: {just-good_placeholder2}"));
             });
         }
+        public static void OnPlayerHurting(HurtingEventArgs ev)
+        {
+            ev.Player.Broadcast(2, PLAPI.SetPlaceholders(ev.Player, "Im need {color_red} placeholder! and {color_weotghjwet}. And i can using other placeholders {cool_placeholder}!"));
+        }
     }
 }

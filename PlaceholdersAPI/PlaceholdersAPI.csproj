@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="IPlaceholder.cs" />
+    <Compile Include="IPlaceholderColor.cs" />
     <Compile Include="IPlaceholderHook.cs" />
     <Compile Include="PLAPI.cs" />
     <Compile Include="Plugin.cs" />

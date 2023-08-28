@@ -15,6 +15,7 @@ namespace PlaceholdersTestsFirst
         {
             PLAPI.Register(new CoolPlaceholder()); //Register placeholder
             PLAPI.Register(new JustGoodPlaceholder());
+            PLAPI.Register(new ColorPlaceholder());
 
             base.OnEnabled();
         }

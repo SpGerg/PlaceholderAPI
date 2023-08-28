@@ -46,6 +46,11 @@ namespace PlaceholdersAPI
 
                 string requested = placeholder.OnPlaceholderRequest(player, _match.Replace($"{placeholder.Identifier}_", ""));
 
+                if (placeholder is IPlaceholderColor)
+                {
+                    requested = $"<color={((IPlaceholderColor)placeholder).Color.ToString().ToLower()}>{requested}</color>";
+                }
+
                 result = result.Replace(match.Value, requested);
             }
 

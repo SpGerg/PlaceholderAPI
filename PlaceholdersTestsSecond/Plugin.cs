@@ -13,6 +13,7 @@ namespace PlaceholdersTestsSecond
         public override void OnEnabled()
         {
             Exiled.Events.Handlers.Player.Jumping += Events.OnPlayerJump;
+            Exiled.Events.Handlers.Player.Hurting += Events.OnPlayerHurting;
 
             base.OnEnabled();
         }
@@ -20,6 +21,7 @@ namespace PlaceholdersTestsSecond
         public override void OnDisabled()
         {
             Exiled.Events.Handlers.Player.Jumping -= Events.OnPlayerJump;
+            Exiled.Events.Handlers.Player.Hurting -= Events.OnPlayerHurting;
 
             base.OnDisabled();
         }
