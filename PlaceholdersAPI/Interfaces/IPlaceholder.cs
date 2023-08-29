@@ -1,13 +1,6 @@
 ﻿namespace PlaceholdersAPI.Interfaces
 {
-    public interface IPlaceholder : IPlaceholderHook
+    public interface IPlaceholder : IPlaceholderInfo
     {
-        string Name { get; }
-
-        string Identifier { get; }
-
-        string Author { get; }
-
-        string Description { get; }
     }
 }

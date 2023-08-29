@@ -3,7 +3,7 @@ using PlaceholdersAPI.Interfaces;
 
 namespace PlaceholdersTestsFirst
 {
-    public class JustGoodPlaceholder : IPlaceholder
+    public class JustGoodPlaceholder : IPlaceholder, IPlaceholderHookPlayer
     {
         public string Name => "This is just good placeholder";
 
@@ -17,7 +17,7 @@ namespace PlaceholdersTestsFirst
         {
             if (identifier == "placeholder2")
             {
-                return "Hello, world!";
+                return player.Nickname.ToUpper();
             }
 
             return null;

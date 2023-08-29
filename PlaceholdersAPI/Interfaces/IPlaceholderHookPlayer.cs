@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace PlaceholdersAPI.Interfaces
 {
-    public interface IPlaceholderHook
+    public interface IPlaceholderHookPlayer
     {
-        string OnPlaceholderRequest(string identifier);
+        string OnPlaceholderRequest(Player player, string identifier);
     }
 }

@@ -4,7 +4,7 @@ using PlaceholdersAPI.Interfaces;
 namespace PlaceholdersTestsFirst
 {
     //Cool placeholder
-    public class CoolPlaceholder : IPlaceholder
+    public class CoolPlaceholder : IPlaceholder, IPlaceholderHook
     {
         public string Name => "Cool placeholder";
 
@@ -15,7 +15,7 @@ namespace PlaceholdersTestsFirst
 
         public string Description => "Just cool placeholder, lol.";
 
-        public string OnPlaceholderRequest(Player player, string identifier)
+        public string OnPlaceholderRequest(string identifier)
         {
             if (identifier == "placeholder")
             {

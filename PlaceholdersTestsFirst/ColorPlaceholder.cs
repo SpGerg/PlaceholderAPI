@@ -32,5 +32,10 @@ namespace PlaceholdersTestsFirst
             Color = ConsoleColor.Green;
             return "green placeholder";
         }
+
+        public string OnPlaceholderRequest(string identifier)
+        {
+            return null;
+        }
     }
 }

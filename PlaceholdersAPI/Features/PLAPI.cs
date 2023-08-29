@@ -18,6 +18,11 @@ namespace PlaceholdersAPI.Features
                 throw new NullReferenceException("Plugin \"Placeholders\" not enabled or not found.");
             }
 
+            if (string.IsNullOrWhiteSpace(placeholder.Identifier))
+            {
+                throw new ArgumentException("Placeholder identifier is null or whitespace.");
+            }
+
             if (PlaceholdersPlugin.Placeholders.Contains(placeholder))
             {
                 throw new ArgumentException("Placeholder is contains.");
@@ -48,15 +53,25 @@ namespace PlaceholdersAPI.Features
                     continue;
                 }
 
-                string requested = placeholder.OnPlaceholderRequest(player, _match.Replace($"{placeholder.Identifier}_", ""));
+                string requested = string.Empty;
 
-                if (placeholder is IPlaceholderColor)
+                if (placeholder is IPlaceholderHook placeholderHook)
                 {
-                    requested = $"<color={((IPlaceholderColor)placeholder).Color.ToString().ToLower()}>{requested}</color>";
+                    requested = placeholderHook.OnPlaceholderRequest(_match.Replace($"{placeholder.Identifier}_", ""));
+                }
+
+                if (placeholder is IPlaceholderHookPlayer placeholderHookPlayer)
+                {
+                    requested = placeholderHookPlayer.OnPlaceholderRequest(player, _match.Replace($"{placeholder.Identifier}_", ""));
+                }
+
+                if (placeholder is IPlaceholderColor placeholderColor)
+                {
+                   requested = $"<color={placeholderColor.Color.ToString().ToLower()}>{requested}</color>";
                 }
 
                 result = result.Replace(match.Value, requested);
-            }
+           }
 
             return result;
         }
