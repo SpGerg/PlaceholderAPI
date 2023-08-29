@@ -62,7 +62,7 @@
       <HintPath>..\Exiled\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Placeholders">
-      <HintPath>..\Placeholders\bin\Debug\Placeholders.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Roaming\EXILED\Plugins\Placeholders.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,12 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
     <Compile Include="Interfaces\IPlaceholder.cs" />
     <Compile Include="Interfaces\IPlaceholderColor.cs" />
     <Compile Include="Interfaces\IPlaceholderHook.cs" />
     <Compile Include="Features\PLAPI.cs" />
-    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

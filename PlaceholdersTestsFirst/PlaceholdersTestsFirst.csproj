@@ -59,7 +59,7 @@
       <HintPath>..\Exiled\Exiled.Updater.dll</HintPath>
     </Reference>
     <Reference Include="PlaceholdersAPI">
-      <HintPath>..\PlaceholdersAPI\bin\Debug\PlaceholdersAPI.dll</HintPath>
+      <HintPath>..\Imports\PlaceholdersAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

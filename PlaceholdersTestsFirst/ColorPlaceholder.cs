@@ -1,5 +1,5 @@
 ﻿using Exiled.API.Features;
-using PlaceholdersAPI;
+using PlaceholdersAPI.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

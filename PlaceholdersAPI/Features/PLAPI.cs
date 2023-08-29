@@ -1,4 +1,5 @@
 ﻿using Exiled.API.Features;
+using Exiled.Loader;
 using PlaceholdersAPI.Interfaces;
 using System;
 using System.Linq;
@@ -8,24 +9,26 @@ namespace PlaceholdersAPI.Features
 {
     public static class PLAPI
     {
+        public static Placeholders.Plugin PlaceholdersPlugin { get; } = (Placeholders.Plugin)Loader.GetPlugin("Placeholders");
+
         public static void Register(IPlaceholder placeholder)
         {
-            if (Plugin.PlaceholdersPlugin == default)
+            if (PlaceholdersPlugin == default)
             {
                 throw new NullReferenceException("Plugin \"Placeholders\" not enabled or not found.");
             }
 
-            if (Plugin.PlaceholdersPlugin.Placeholders.Contains(placeholder))
+            if (PlaceholdersPlugin.Placeholders.Contains(placeholder))
             {
                 throw new ArgumentException("Placeholder is contains.");
             }
 
-            if (Plugin.PlaceholdersPlugin.Placeholders.Any(identifier => identifier.Identifier == placeholder.Identifier))
+            if (PlaceholdersPlugin.Placeholders.Any(identifier => identifier.Identifier == placeholder.Identifier))
             {
                 throw new ArgumentException($"The placeholder named \"{placeholder.Name}\" already has this identifier");
             }
 
-            Plugin.PlaceholdersPlugin.Placeholders.Add(placeholder);
+            PlaceholdersPlugin.Placeholders.Add(placeholder);
 
             Log.Send($"Placeholder \"{placeholder.Name}\": was registered", Discord.LogLevel.Info, ConsoleColor.Green);
         }
@@ -38,7 +41,7 @@ namespace PlaceholdersAPI.Features
             foreach (Match match in matches)
             {
                 string _match = match.Value.Replace("{", "").Replace("}", "");
-                IPlaceholder placeholder = Plugin.PlaceholdersPlugin.Placeholders.FirstOrDefault(_placeholder => _placeholder.Identifier == GetIdentifierFromPlaceholder(_match));
+                IPlaceholder placeholder = PlaceholdersPlugin.Placeholders.FirstOrDefault(_placeholder => _placeholder.Identifier == GetIdentifierFromPlaceholder(_match));
 
                 if (placeholder == default)
                 {

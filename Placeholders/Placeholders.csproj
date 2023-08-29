@@ -55,9 +55,8 @@
     <Reference Include="Exiled.Updater">
       <HintPath>..\Exiled\Exiled.Updater.dll</HintPath>
     </Reference>
-    <Reference Include="PlaceholdersAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\AppData\Roaming\EXILED\Plugins\PlaceholdersAPI.dll</HintPath>
+    <Reference Include="PlaceholdersAPI">
+      <HintPath>..\..\..\..\AppData\Roaming\EXILED\Plugins\PlaceholdersAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

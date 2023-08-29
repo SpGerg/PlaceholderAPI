@@ -1,5 +1,5 @@
 ﻿using Exiled.API.Features;
-using PlaceholdersAPI;
+using PlaceholdersAPI.Interfaces;
 
 namespace PlaceholdersTestsFirst
 {

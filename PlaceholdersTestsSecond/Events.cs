@@ -1,6 +1,6 @@
 ﻿using Exiled.Events.EventArgs.Player;
 using MEC;
-using PlaceholdersAPI;
+using PlaceholdersAPI.Features;
 
 namespace PlaceholdersTestsSecond
 {
