@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PlaceholdersTestsFirst
 {
-    public class ColorPlaceholder : IPlaceholder, IPlaceholderColor
+    public class ColorPlaceholder : IPlaceholder, IPlaceholderHook, IPlaceholderColor
     {
         public string Name => "Color placeholder";
 
@@ -20,7 +20,7 @@ namespace PlaceholdersTestsFirst
 
         public ConsoleColor Color { get; set; } = ConsoleColor.Green;
 
-        public string OnPlaceholderRequest(Player player, string identifier)
+        public string OnPlaceholderRequest(string identifier)
         {
             if (identifier == "red")
             {
@@ -31,11 +31,6 @@ namespace PlaceholdersTestsFirst
 
             Color = ConsoleColor.Green;
             return "green placeholder";
-        }
-
-        public string OnPlaceholderRequest(string identifier)
-        {
-            return null;
         }
     }
 }
