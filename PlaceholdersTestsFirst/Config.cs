@@ -7,5 +7,7 @@ namespace PlaceholdersTestsFirst
         public bool IsEnabled { get; set; }
 
         public bool Debug { get; set; }
+
+        public string SomeTextWithPlaceholder { get; set; } = "Some text with {cool_placeholder}";
     }
 }
