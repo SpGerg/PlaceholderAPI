@@ -15,7 +15,7 @@ namespace PlaceholdersAPI
 {
     public class Plugin : Plugin<Config>
     {
-        public override PluginPriority Priority => PluginPriority.First;
+        public override PluginPriority Priority => PluginPriority.Last;
 
         public override void OnEnabled()
         {
