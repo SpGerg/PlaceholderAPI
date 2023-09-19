@@ -7,5 +7,7 @@ namespace Placeholders
         public bool IsEnabled { get; set; }
 
         public bool Debug { get; set; }
+
+        public bool IsChangePlaceholdersInConfigs { get; set; }
     }
 }

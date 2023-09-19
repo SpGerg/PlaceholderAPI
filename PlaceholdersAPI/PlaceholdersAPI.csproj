@@ -76,14 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
     <Compile Include="Interfaces\IPlaceholderHook.cs" />
     <Compile Include="Interfaces\IPlaceholderHookPlayer.cs" />
     <Compile Include="Interfaces\IPlaceholderInfo.cs" />
     <Compile Include="Interfaces\IPlaceholder.cs" />
     <Compile Include="Interfaces\IPlaceholderColor.cs" />
     <Compile Include="Features\PLAPI.cs" />
-    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
